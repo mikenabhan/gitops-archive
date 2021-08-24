@@ -40,6 +40,6 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: nodered-claim
+        existingClaim: nodered-claim-1
         mountPath: /data
         storageClass: longhorn
