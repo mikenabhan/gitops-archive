@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: nodered-claim-1
+  name: nodered-claim
 spec:
   accessModes:
     - ReadWriteMany
