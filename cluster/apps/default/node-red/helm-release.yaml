@@ -42,3 +42,4 @@ spec:
         enabled: true
         existingClaim: nodered-claim
         mountPath: /data
+        storageClass: longhorn
