@@ -1,0 +1,6 @@
+# tls-san:
+#   - "foo.local"
+disable:
+  - "servicelb"
+  - "traefik"
+  - "metrics-server"

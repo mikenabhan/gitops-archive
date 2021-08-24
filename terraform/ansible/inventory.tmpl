@@ -1,0 +1,26 @@
+k3s_cluster:
+  hosts:
+%{ for index, master-dns in master-dns ~}
+    ${master-dns}.${network-domain}:
+      ansible_user: ansible
+      ansible_host: ${master-dns}.${network-domain}
+      k3s_control_node: true
+%{ endfor ~}
+%{ for index, master-dns-pve2 in master-dns-pve2 ~}
+    ${master-dns-pve2}.${network-domain}:
+      ansible_user: ansible
+      ansible_host: ${master-dns-pve2}.${network-domain}
+      k3s_control_node: true
+%{ endfor ~}
+%{ for index, dns in worker-dns ~}
+    ${dns}.${network-domain}:
+      ansible_user: ansible
+      ansible_host: ${dns}.${network-domain}
+      k3s_control_node: false
+%{ endfor ~}
+%{ for index, dns-pve2 in worker-dns-pve2 ~}
+    ${dns-pve2}.${network-domain}:
+      ansible_user: ansible
+      ansible_host: ${dns-pve2}.${network-domain}
+      k3s_control_node: false
+%{ endfor ~}
