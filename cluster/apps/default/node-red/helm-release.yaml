@@ -40,5 +40,5 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: node-config
+        existingClaim: nodered-claim
         mountPath: /data
