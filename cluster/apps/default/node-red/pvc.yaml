@@ -5,7 +5,7 @@ metadata:
   name: nodered-claim
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   storageClassName: longhorn
   resources:
     requests:
