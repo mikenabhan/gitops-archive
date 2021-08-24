@@ -22,6 +22,7 @@ spec:
       defaultClass: true
       defaultClassReplicaCount: 3
       reclaimPolicy: Retain
+    defaultSettings:
       defaultDataPath: /var/lib/longhorn
     ingress:
       enabled: true
