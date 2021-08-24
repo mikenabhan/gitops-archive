@@ -23,11 +23,11 @@ spec:
       defaultClassReplicaCount: 3
       reclaimPolicy: Retain
       defaultDataPath: /var/lib/longhorn
-    # ingress:
-    #   enabled: true
-    #   host: "longhorn.${SECRET_DOMAIN}"
-    #   path: /
-    #   tls: true
-    #   tlsSecret: "${SECRET_DOMAIN}-tls-longhorn"
-    #   annotations:
-    #     kubernetes.io/ingress.class: "nginx"
+    ingress:
+      enabled: true
+      host: "longhorn.${SECRET_DOMAIN}"
+      path: /
+      tls: true
+      tlsSecret: "${SECRET_DOMAIN}-tls-longhorn"
+      annotations:
+        kubernetes.io/ingress.class: "nginx"
