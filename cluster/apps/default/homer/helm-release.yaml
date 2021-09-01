@@ -38,3 +38,4 @@ spec:
         enabled: true
         existingClaim: homer-config
         mountPath: /www/assets
+        storageClass: longhorn
